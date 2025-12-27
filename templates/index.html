@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Paragraph Summarizer</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Paragraph Summarizer</h1>
+
+        <form method="POST">
+            <textarea name="paragraph" placeholder="Enter your paragraph here..." required>{{ text }}</textarea>
+            <button type="submit">Summarize</button>
+        </form>
+
+        {% if summary %}
+        <div class="result">
+            <h3>Summary</h3>
+            <p>{{ summary }}</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
